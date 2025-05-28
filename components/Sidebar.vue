@@ -20,7 +20,7 @@
           :items="navLinks" 
           :collapsed="isCollapsed"           
           :ui="{
-            linkLeadingIcon: 'text-lg'
+            linkLeadingIcon: isCollapsed ? 'text-xl mx-auto' : 'text-lg'
           }"
         />
       </div>
@@ -63,7 +63,6 @@
 <script setup lang="ts">
 const config = useRuntimeConfig();
 const wpApiUrl = config.public.wordpressApiUrl;
-
 const isCollapsed = ref(false);
 const menu = ref<any[]>([]);
 const error = ref<string | null>(null);
