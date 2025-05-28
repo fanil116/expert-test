@@ -14,7 +14,12 @@ export default defineNuxtConfig({
     fonts: false
   },
   css: ['~/assets/css/main.css'],
-  
+  icon: {
+    customCollections: [{
+      prefix: 'custom',
+      dir: './assets/icons'
+    }]
+  },
   // Используем в Nuxt 3 для загрузки .env файлов
   nitro: {
     preset: 'node'
